@@ -1,9 +1,11 @@
 clear all
-%gamedata = csvread(strcat('pirate.csv'));
+gamedata = csvread(strcat('pirate.csv'));
+dim(
 
 p = 100*[0.2 0.8 0.2]';
 r = [30 30 10]';
 ts = 30;
+sols = zeros(n, 4);
 
 cvx_solver gurobi
 cvx_begin
